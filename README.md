@@ -1,34 +1,44 @@
 # Projetos de Previsão de Público em Jogos do Campeonato Brasileiro
 
-## 📈 Previsão de Desempenho do Cruzeiro
-Este projeto realiza a previsão de desempenho do time de futebol Cruzeiro, aplicando análise exploratória e modelagem preditiva para identificar tendências e projetar resultados futuros. Utilizando Python e bibliotecas de ciência de dados como Pandas e Scikit-Learn, o projeto visa ajudar a entender o comportamento de variáveis-chave para uma previsão mais precisa e informada.
+## 📊 Previsão de Público em Jogos do Cruzeiro
+Este projeto utiliza dados históricos de público nos jogos do Cruzeiro Esporte Clube para criar um modelo preditivo que estima o número de torcedores em jogos futuros do clube no Campeonato Brasileiro. O projeto foi desenvolvido em Python, utilizando técnicas de web scraping e bibliotecas de ciência de dados para tratamento e modelagem.
 
 ## 📌 Descrição do Projeto
-Com o objetivo de antecipar o desempenho do Cruzeiro, este projeto realiza uma análise profunda de dados históricos e prevê resultados, considerando fatores que podem impactar o rendimento do time ao longo do tempo. O projeto inclui uma análise exploratória e a implementação de modelos de machine learning que ajudam a construir previsões de desempenho baseadas em dados reais.
+O projeto visa antecipar o número de torcedores que comparecerão aos jogos do Cruzeiro no Campeonato Brasileiro, com o objetivo de auxiliar no planejamento e logística dos eventos esportivos. Através da coleta de dados históricos de público, o projeto usa técnicas de aprendizado de máquina para construir um modelo de previsão robusto e ajustado a essa finalidade.
+
+Os dados históricos foram coletados com web scraping e passaram por etapas rigorosas de tratamento e análise para que o modelo pudesse oferecer previsões precisas e confiáveis.
 
 ## 🛠 Tecnologias Utilizadas
 ### 📚 Principais Bibliotecas
-Pandas: Utilizada para carregamento, limpeza e transformação dos dados.
-Scikit-Learn: Biblioteca de machine learning, utilizada para a modelagem preditiva e métricas de desempenho dos modelos.
-Matplotlib e Seaborn: Bibliotecas de visualização, usadas para a análise exploratória dos dados e a criação de gráficos.
+Requests: Utilizada para realizar o web scraping dos dados de público em fontes confiáveis.
+BeautifulSoup: Facilita a análise e extração de informações específicas do HTML das páginas.
+Pandas: Empregada para manipulação e pré-processamento de dados, desde a organização até o tratamento de valores ausentes.
+Scikit-Learn: Biblioteca de machine learning utilizada para construir e avaliar os modelos preditivos.
+Matplotlib & Seaborn: Bibliotecas para visualização dos dados e análise exploratória.
 
 ## 📈 Metodologia
-Preparação dos Dados:
-Carregamento e pré-processamento do dataset, incluindo a conversão de variáveis categóricas, tratamento de valores ausentes e normalização.
-Análise Exploratória (EDA):
-Visualização e análise dos dados para identificar padrões e correlações que possam auxiliar na modelagem.
-Modelagem Preditiva:
-Aplicação de um modelo de regressão linear para prever o desempenho futuro com base em variáveis históricas. Testes de diferentes modelos foram realizados para garantir que o modelo final fosse robusto e confiável.
-Avaliação do Modelo:
-Métricas como o erro médio absoluto (MAE) e o erro quadrático médio (RMSE) foram utilizadas para avaliar a precisão do modelo.
+1. Coleta de Dados com Web Scraping
+O projeto começa com a coleta de dados históricos do público nos jogos do Cruzeiro. Utilizando as bibliotecas Requests e BeautifulSoup, foi feito um web scraping em sites esportivos para extrair informações de público, data, local, adversário e outras variáveis relevantes.
+Após o scraping, os dados foram organizados e salvos em um formato tabular para facilitar o processamento subsequente.
+2. Tratamento e Análise dos Dados
+Limpeza: Tratamento de valores ausentes e padronização dos dados coletados.
+Transformação: As variáveis categóricas, como adversário e local do jogo, foram transformadas em variáveis numéricas para serem utilizadas pelos modelos de machine learning.
+Engenharia de Atributos: Foram criadas novas variáveis a partir das informações de base para enriquecer o modelo. Isso incluiu variáveis de contexto, como a fase da competição e o desempenho recente do time.
+3. Comparação e Seleção dos Modelos
+Foram testados diferentes algoritmos de aprendizado de máquina, incluindo:
+Regressão Linear
+Árvore de Decisão
+Random Forest
+XGBoost
+Cada modelo foi comparado usando métricas como RMSE (Root Mean Squared Error) e MAE (Mean Absolute Error) para determinar qual oferecia as previsões mais precisas.
+4. Otimização dos Hiperparâmetros
+Após a seleção do modelo com melhor desempenho, foi realizada uma otimização dos hiperparâmetros utilizando GridSearchCV e RandomizedSearchCV, melhorando ainda mais a precisão das previsões.
 
 ## 🔍 Exemplo de Previsão
-A partir dos dados históricos, o modelo pode prever, por exemplo, o desempenho esperado para as próximas partidas. Isso ajuda a equipe a tomar decisões estratégicas e ajustar táticas com base nas projeções de desempenho.
+Com base nos dados históricos e no modelo final ajustado, é possível prever, por exemplo, que um jogo do Cruzeiro contra um grande rival no Mineirão poderia ter uma presença estimada de até 40.000 torcedores, dependendo das condições.
 
-## 🎯 Resultados e Próximos Passos
-Com a conclusão das previsões iniciais, o modelo fornece uma base para análises futuras e pode ser melhorado com mais dados e ajustes nas variáveis. Entre as melhorias previstas estão:
+Observação
+As previsões são influenciadas por fatores externos como desempenho atual do time, clima e fase da competição, que podem impactar a precisão do modelo.
 
-Experimentação com novos algoritmos de machine learning, como Random Forest e XGBoost.
-Testes adicionais com validação cruzada para maior confiabilidade.
-
-
+## 📊 Resultados e Conclusão
+Ao final, o modelo otimizado mostrou-se eficaz para prever a presença do público nos jogos do Cruzeiro, com boa acurácia e uma margem de erro reduzida, ajudando a equipe de logística e planejamento do clube a se preparar de forma mais assertiva para os eventos.
