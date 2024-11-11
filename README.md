@@ -10,11 +10,11 @@ Os dados históricos foram coletados com web scraping e passaram por etapas rigo
 
 ## 🛠 Tecnologias Utilizadas
 ### 📚 Principais Bibliotecas
-Requests: Utilizada para realizar o web scraping dos dados de público em fontes confiáveis.
-BeautifulSoup: Facilita a análise e extração de informações específicas do HTML das páginas.
-Pandas: Empregada para manipulação e pré-processamento de dados, desde a organização até o tratamento de valores ausentes.
-Scikit-Learn: Biblioteca de machine learning utilizada para construir e avaliar os modelos preditivos.
-Matplotlib & Seaborn: Bibliotecas para visualização dos dados e análise exploratória.
+- Requests: Utilizada para realizar o web scraping dos dados de público em fontes confiáveis.
+- BeautifulSoup: Facilita a análise e extração de informações específicas do HTML das páginas.
+- Pandas: Empregada para manipulação e pré-processamento de dados, desde a organização até o tratamento de valores ausentes.
+- Scikit-Learn: Biblioteca de machine learning utilizada para construir e avaliar os modelos preditivos.
+- Matplotlib & Seaborn: Bibliotecas para visualização dos dados e análise exploratória.
 
 ## 📈 Metodologia
 1. Coleta de Dados com Web Scraping
